@@ -1,4 +1,4 @@
-package variables
+package v_enteras
 
 import "fmt"
 
