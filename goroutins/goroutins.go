@@ -6,10 +6,11 @@ import (
 	"time"
 )
 
-func MiNombreLento(nombre string) {
-	letras := strings.Split(nombre)
+func MiNombreLento(nombre string, chanel1 chan bool) {
+	letras := strings.Split(nombre, "")
 	for _, letra := range letras {
 		time.Sleep(1000 * time.Millisecond)
 		fmt.Println(letra)
 	}
+	chanel1 <- true
 }
